@@ -3,79 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>La Fabrique à Merveilles</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Georgia,serif;background:#fff9fc;color:#513d47}
-header{background:linear-gradient(135deg,#f9dce8,#fff);text-align:center;padding:45px 20px}
-h1{color:#b28a45;font-size:42px;margin:0 0 10px}
-header p{font-size:19px;font-style:italic}
-nav{background:white;text-align:center;padding:18px}
-nav a{margin:0 10px;color:#9a7180;text-decoration:none;font-weight:bold}
-.hero{text-align:center;padding:70px 20px;background:#fceaf1}
-.hero h2{font-size:36px;color:#b28a45}
-.hero p{max-width:650px;margin:auto;font-size:18px;line-height:1.7}
-.btn{display:inline-block;margin-top:25px;background:#c5a05c;color:white;padding:14px 25px;border-radius:30px;text-decoration:none}
-section{max-width:1000px;margin:auto;padding:55px 20px}
-h2{text-align:center;color:#b28a45}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px}
-.card{background:white;border:1px solid #eddce3;border-radius:20px;padding:25px;text-align:center;box-shadow:0 5px 18px #0000000d}
-.card span{font-size:38px}
-.card h3{color:#9a7180}
-footer{text-align:center;background:#f4d9e4;padding:30px}
-</style>
-</head>
+* {
+  box-sizing: border-box;
+}
 
-<body>
+html {
+  scroll-behavior: smooth;
+}
 
-<header>
-<h1>La Fabrique à Merveilles ✨</h1>
-<p>Des créations personnalisées faites avec amour</p>
-</header>
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: #4f3b43;
+  background: white;
+}
 
-<nav>
-<a href="#accueil">Accueil</a>
-<a href="#creations">Créations</a>
-<a href="#personnalisation">Personnalisation</a>
-<a href="#contact">Contact</a>
-</nav>
+/* EN-TÊTE */
+header {
+  background: linear-gradient(135deg, #f9dce9, #fff7fb);
+  text-align: center;
+  padding: 70px 20px 50px;
+}
 
-<section id="accueil" class="hero">
-<h2>Bienvenue dans mon univers 💕</h2>
-<p>
-Je crée des décorations et cadeaux personnalisés avec soin,
-pour rendre chaque moment encore plus magique.
-</p>
-<a class="btn" href="#creations">Découvrir mes créations</a>
-</section>
+header h1 {
+  margin: 0;
+  color: #c49a48;
+  font-size: clamp(42px, 9vw, 80px);
+  line-height: 1;
+}
 
-<section id="creations">
-<h2>Mes créations ✨</h2>
+header p {
+  font-size: 22px;
+  font-style: italic;
+  margin-top: 28px;
+}
 
-<div class="grid">
+/* MENU */
+nav {
+  background: white;
+  padding: 18px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #f0dce5;
+}
 
-<div class="card">
-<span>🎄</span>
-<h3>Boules de Noël</h3>
-<p>Créations personnalisées avec prénom, message ou photo.</p>
-</div>
+nav a {
+  color: #966f80;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+  display: inline-block;
+  padding: 6px;
+}
 
-<div class="card">
-<span>🎁</span>
-<h3>Cadeaux personnalisés</h3>
-<p>Des cadeaux uniques réalisés selon vos envies.</p>
-</div>
+/* ACCUEIL */
+.hero {
+  background: #fbeaf1;
+  text-align: center;
+  padding: 80px 20px;
+}
 
-<div class="card">
-<span>💕</span>
-<h3>Saint-Valentin</h3>
-<p>Des créations romantiques pour faire plaisir.</p>
-</div>
+.hero h2 {
+  color: #bd9144;
+  font-size: clamp(36px, 8vw, 65px);
+  margin-top: 0;
+}
 
-<div class="card">
-<span>👶</span>
-<h3>Naissance</h3>
-<p>Des souvenirs personnalisés pour les tout-petits.</p>
-</div>
+.hero p {
+  max-width: 750px;
+  margin: auto;
+  font-size: 20px;
+  line-height: 1.7;
+}
 
-<div
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 28px;
+  border-radius: 40px;
+  background: #c9a45a;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+  padding: 70px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.titre {
+  text-align: center;
+  color: #9d7181;
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
+/* CRÉATIONS */
+.creations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.carte {
+  background: white;
+  border: 1px solid #f0dfe6;
+  border-radius: 25px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(90,60,70,0.12);
+}
+
+.carte .emoji {
+  font-size: 75px;
+  margin-bottom: 15px;
+}
+
+.carte h3 {
+  color: #896473;
+  font-size: 23px;
+}
+
+.carte p {
+  line-height: 1.6;
+}
+
+.prix {
+  color: #bd9144;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* PERSONNALISATION */
+.personnalisation {
+  background: #fff7fa;
+  text-align: center;
+}
+
+.person
